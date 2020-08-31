@@ -4,7 +4,7 @@ Collection of scripts to investigate the system impact of 3rd party macOS MDM, a
 
 3rd party daemons on a client system can result in system slowdowns and increased resource usage, particularly when upgrades to the OS occur and change the assumptions underlying the 3rd party software.
 
-Our recommendation would be to rely on macOS's built-in MDM capabilities which are guaranteed to be current with any system updates.
+Our recommendation would be to rely on macOS's built-in MDM capabilities which are guaranteed to be current with any system updates. In addition, relying on software that does not respect the macOS sandbox, such as vendor specific installers, provides a higher value attack vector for hackers.
 
 ## Use at your own risk
 
