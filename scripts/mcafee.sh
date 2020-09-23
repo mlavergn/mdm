@@ -18,5 +18,13 @@ sudo mv /var/McAfee /var/McAfee-x
 sudo touch /Library/McAfee
 sudo chmod 444 /Library/McAfee
 
-# kill forked processes
+# stop forked processes
 ps A | grep -i mcafee
+
+chmod -xxx /usr/local/McAfee/fmp/bin/*
+chmod -xxx /usr/local/McAfee/fmp/bin64/*
+chmod -xxx /Library/McAfee/agent/bin/*
+chmod -xxx /usr/local/McAfee/StatefulFirewall/bin/*
+chmod -xxx /usr/local/McAfee/AntiMalware/*
+
+killall -9 fmpd masvc macmnsvc Mue_InUse VShieldService VShieldScanManager VShieldScanner VShieldUpdate McAfee\ Reporter StatefulFirewall
