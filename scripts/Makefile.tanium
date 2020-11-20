@@ -1,0 +1,30 @@
+###############################################
+#
+# Makefile
+#
+###############################################
+
+# Tanium: Endpoint client security
+
+files:
+	pkgutil --pkgs | grep com.tanium
+	pkgutil --files com.tanium.taniumclient.TaniumClient.pkg
+
+kill:
+	ps A | grep -i tanium
+	sudo killall TaniumClient
+	sudo killall TaniumEndpointIndex
+	sudo killall TaniumDetectEngine
+
+stop:
+	sudo mv /Libary/Tanium /Libary/Tanium-x
+	sudo mv /Library/LaunchDaemons/com.tanium.taniumclient.plist /Library/LaunchDaemons/com.tanium.taniumclient.plist-x
+
+lock:
+	# prevent unintended reinstalls
+	sudo touch /Library/Tanium
+	sudo chmod 444 /Library/Tanium
+
+uninstall:
+	# WARNING: irreversible
+	sudo pkgutil --forget com.tanium.taniumclient.TaniumClient.pkg
