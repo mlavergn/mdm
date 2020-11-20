@@ -17,7 +17,7 @@ stop:
 
 lock:
 	# prevent auto-start
-	sudo mv /Libary/McAfee /Libary/McAfeex
+	sudo mv /Library/McAfee /Library/McAfeex
 	sudo mv /var/McAfee /var/McAfeex
 	# prevent reinstall
 	sudo touch /Library/McAfee
@@ -25,9 +25,9 @@ lock:
 
 unlock:
 	# allow reinstall
-	sudo rmdir /Library/McAfee
+	sudo rm /Library/McAfee
 	# allow auto-start
-	sudo mv /Libary/McAfeex /Libary/McAfee
+	sudo mv /Library/McAfeex /Library/McAfee
 	sudo mv /var/McAfeex /var/McAfee
 
 show:

@@ -17,12 +17,12 @@ stop:
 
 lock:
 	# prevent auto-starts
-	sudo mv /Libary/ATOS /Library/ATOSX
+	sudo mv /Library/ATOS /Library/ATOSX
 	sudo mv /usr/bin/atos /usr/bin/atosx
 
 unlock:
 	# enable auto-starts
-	sudo mv /Libary/ATOSX /Library/ATOS
+	sudo mv /Library/ATOSX /Library/ATOS
 	sudo mv /usr/bin/atosx /usr/bin/atos
 
 show:
