@@ -13,8 +13,14 @@ files:
 stop:
 	sudo launchctl unload -w /Library/LaunchDaemons/com.tanium.taniumclient.plist
 
-kill:
+status:
 	ps A | grep -i tanium
+	@file /Library/Tanium
+	@file /Library/Taniumx
+	@file /Library/LaunchDaemons/com.tanium.taniumclient.plist
+	@file /Library/LaunchDaemons/com.tanium.taniumclient.plistx
+
+kill:
 	-sudo killall TaniumClient
 	-sudo killall TaniumCX
 	-sudo killall TaniumDetectEngine

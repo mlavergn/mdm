@@ -19,9 +19,14 @@ stop:
 	# sudo launchctl unload -w /Library/LaunchAgents/com.jamf.management.agent.plist
 	# sudo launchctl unload -w /Library/LaunchAgents/com.jamfsoftware.jamf.agent.plist
 
-kill:
-	# kill forked processes
+status:
 	ps A | grep -i jamf
+	@file /usr/local/jamf
+	@file /usr/local/jamfx
+	@file /Library/Application\ Support/JAMF
+	@file /Library/Application\ Support/JAMFX
+
+kill:
 	sudo killall JamfDaemon jamfAgent
 
 lock: stop kill
